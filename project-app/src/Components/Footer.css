@@ -1,0 +1,12 @@
+.ImageHolder {
+  border: 0px solid red;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  width: 235px;
+}
+p {
+  font-size: 0.8rem;
+  color: grey;
+  width: 70%;
+}
