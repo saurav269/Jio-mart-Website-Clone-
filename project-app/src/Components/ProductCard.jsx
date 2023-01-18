@@ -3,11 +3,22 @@
   const ProductCard = ({image,name,category,price}) => {
 
     return (
-      <div>
-        <img src={image} alt=''/>
-        <p>Product Name : {name}</p>
+      <div className='product__all'>
+        <div>
+          <img src={image} alt='' className='pic__div'/>
+        </div>
+
+        <div className=''>
+        <div className='product__name'>
+        <h4>{name}</h4>
+        </div>
+        <div className='product__cate'>
         <p>Category :{category}</p>
-        <p>Price : {price}</p> 
+        </div>
+        <div className='product__price'>
+        <p>Price : {price}</p>
+        </div>  
+        </div>
       </div>
     )
   }

@@ -20,7 +20,7 @@ export const getDataFailure=()=>{
 export const getData=(params={})=>(dispatch)=>{
 
     dispatch(getDataRequest())
-    axios.get(`https://jiomart-api-b2yt.onrender.com/data`,params)
+    axios.get(`https://product-new-api.onrender.com/data`,params)
     .then((res) => {
         console.log(res.data)
         dispatch(getDataSuccess(res.data))

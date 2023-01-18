@@ -1,0 +1,38 @@
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    gap: 15%;
+
+}
+
+.product__div{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap : 10px;
+    width: 95%;
+}
+.pic__div{
+    /* border: 1px solid blue; */
+    width: 78%;
+}
+
+.product__all{
+
+    border: 1px solid green;
+    width: 80%;
+    margin: auto;
+}
+
+.product__name{
+    /* border: 1px solid red; */
+    line-height: 16px;
+}
+.product__cate{
+    /* border: 1px solid red; */
+    margin-top: -15px;
+}
+.product__price{
+    margin-top: -15px;
+}
