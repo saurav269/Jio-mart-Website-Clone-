@@ -1,6 +1,7 @@
   import React from 'react'
-  
-  const ProductCard = ({image,name,category,price}) => {
+  import{StarIcon} from '@chakra-ui/icons'
+
+  const ProductCard = ({image,name,category,price,rating}) => {
 
     return (
       <div className='product__all'>
@@ -8,7 +9,7 @@
           <img src={image} alt='' className='pic__div'/>
         </div>
 
-        <div className=''>
+      <div className='data__all'>
         <div className='product__name'>
         <h4>{name}</h4>
         </div>
@@ -16,9 +17,16 @@
         <p>Category :{category}</p>
         </div>
         <div className='product__price'>
-        <p>Price : {price}</p>
-        </div>  
-        </div>
+            <p>Price : {price}</p>
+        </div> 
+        <div className='product__price'>
+        Rating :<span className='starbtn'>{rating}
+        <StarIcon className='star'/></span>
+        </div> 
+      </div>
+                <div>
+                  <button>Add Product</button>
+                 </div>
       </div>
     )
   }

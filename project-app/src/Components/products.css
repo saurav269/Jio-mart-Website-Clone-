@@ -1,17 +1,44 @@
 
+body{
+
+    background-color: rgba(225, 225, 225, 0.932);
+}
 .main{
     display: flex;
-    justify-content: space-around;
-    gap: 15%;
+    /* justify-content: space-around; */
+    gap: 3%;
 
+}
+.product__main {
+    /* border: 1px solid black; */
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 0.5rem;
+    
+}
+.product__name{
+    /* border: 1px solid blue; */
+    /* background-color: #fff; */
+    text-align: left;
+    padding: 5px;
+    padding-left: 8px;
+}
+.pro__nam{
+    font-size:18px;
+    margin-left: 18px;
+    color: rgb(3, 3, 63);
+    font-weight: 500;
 }
 
 .product__div{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap : 10px;
     width: 95%;
+    background-color: #fff;
+    padding: 0rem 0rem 1rem 0rem;
+    margin: auto;
 }
 .pic__div{
     /* border: 1px solid blue; */
@@ -19,11 +46,13 @@
 }
 
 .product__all{
-
-    border: 1px solid green;
-    width: 80%;
+    border: 1px solid gray;
+    width: 100%;
     margin: auto;
+    border-radius: 0.5rem;
+    /* margin-top: 10px; */
 }
+
 
 .product__name{
     /* border: 1px solid red; */
@@ -31,8 +60,75 @@
 }
 .product__cate{
     /* border: 1px solid red; */
-    margin-top: -15px;
+    width: 90%;
+    margin-top: -30px;
+    text-align: left;
+    margin-left: 8px;
 }
 .product__price{
     margin-top: -15px;
+    text-align: left;
+    margin-left: 8px;
+}
+.starbtn{
+    font-size: 14px;
+    margin-left: 6px;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-color: rgb(10, 171, 10);
+    color: rgb(239, 226, 226);
+}
+
+.star{
+    font-size: 10px;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-left: 2px;
+}
+.filter__div{
+    border: 1px solid green;
+    width: 50%;
+    height: 800px;
+    margin-left: 15px;
+    border-radius: 1rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0px;
+}
+.mainn__filteer{
+    border: 1px solid red;
+}
+.filter_p{
+    /* border: 1px solid red; */
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    /* width: 98%; */
+    margin: auto;
+    padding: 0.2rem 0.75rem;
+    border-bottom: 1px solid gray;
+
+}
+.category_p{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    /* width: 98%; */
+    margin: auto;
+    padding: 0.2rem 0.75rem;
+    border-bottom: 1px solid gray;
+}
+.product__checkbox{
+    /* border: 1px solid red; */
+    margin-left: 8px;
+    text-align: left;
+    font-size: 17px;
+}
+/* .product__checkbox{
+    border: 1px solid red;
+} */
+.check__boxes{
+    /* border: 1px solid red; */
+    padding-bottom: 3px;
 }
