@@ -81,9 +81,9 @@ export default Footer;
 const Wrapper = styled.div`
   border: 0px solid black;
   width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 10px;
+  // position: fixed;
+  // left: 0;
+  // bottom: 10px;
   background-color: rgb(235, 233, 233);
   padding:50px 0px 50px 0px;
 `;
@@ -94,9 +94,11 @@ const Grid = styled.div`
   margin: auto;
   @media (max-width: 790px){
     grid-template-columns: repeat(2, 1fr);
+    overflow: scroll;
   }
   @media (max-width: 350px){
     grid-template-columns: repeat(1, 1fr);
+    overflow: scroll;
   }
 `;
 
