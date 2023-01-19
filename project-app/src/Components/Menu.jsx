@@ -1,8 +1,9 @@
+import { Box } from '@chakra-ui/layout'
 import React from 'react'
 
 const Menu = () => {
   return (
-    <div>Menu</div>
+    <Box>Menu</Box>
   )
 }
 
