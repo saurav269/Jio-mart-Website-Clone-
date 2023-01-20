@@ -1,11 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import Cart from './Components/Cart';
+// import { CartItem } from './Components/CartItem';
 
 function App() {
   return (
     <div className="App">
-      <Cart/>
+      <Cart/> 
+       {/* <CartItem/> */}
+      
+      
       
     </div>
   );
