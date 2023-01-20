@@ -21,7 +21,8 @@
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2",
     "styled-components": "^5.3.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "server": "json-server --watch db.json --port 8080",

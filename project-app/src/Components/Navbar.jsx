@@ -13,6 +13,9 @@ const Navbar = () => {
       color={"white"}
       border={"0px solid red"}
       padding={"20px 50px 0px 50px"}
+      position="fixed"
+      zIndex={"1"}
+      top={0}
     >
       <Flex justify={"space-evenly"} align={"center"}>
         <Hamb/>
