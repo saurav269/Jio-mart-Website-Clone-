@@ -2,7 +2,6 @@
   import{StarIcon} from '@chakra-ui/icons'
 
   const ProductCard = ({image,name,category,price,rating}) => {
-
     return (
       <div className='product__all'>
         <div>
@@ -17,7 +16,7 @@
         <p>Category :{category}</p>
         </div>
         <div className='product__price'>
-            <p>Price : {price}</p>
+            <p>Price : ₹{price}.00</p>
         </div> 
         <div className='product__price'>
         Rating :<span className='starbtn'>{rating}

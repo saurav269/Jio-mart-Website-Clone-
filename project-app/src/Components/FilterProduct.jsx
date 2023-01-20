@@ -9,8 +9,10 @@ const FilterProduct = () => {
   const[searchParams, setSearchParams] = useSearchParams();
 
   const initialCategory = searchParams.getAll("category");
+  const initialSort = searchParams.getAll("sorting")
 
   const [category, setCategory] = useState(initialCategory || []);
+  const [sorting, setSorting] = useState(initialSort[0] || "");
 
 
   const handleFilter=(e)=>{
@@ -27,12 +29,17 @@ const FilterProduct = () => {
   // console.log(category)
 
   useEffect(() =>{
-
     const params = {}
     params.category = category
+    params.sorting = sorting
     setSearchParams(params)
-  },[category, setSearchParams])
+  },[category, setSearchParams,sorting]);
 
+
+  const handleSort=(e)=>{
+       setSorting(e.target.value)
+  }
+  console.log(sorting)
 
   return (
     <div>
@@ -135,7 +142,64 @@ const FilterProduct = () => {
            <label>Vegetables</label>
         </div>
       </div>
-      </div>  
+      </div> 
+      
+      <div className='mainn__sort'>
+        <div className='filter_p'>
+          <p>Sort Products</p>
+        </div>
+
+        <div className='category_p'>
+          <p>Sort By Price</p>
+        </div>
+
+        <div className='product__checkbox'>
+           <div className='check__boxes'>
+                <input onChange={handleSort}
+                type='radio'
+                value='asc'
+                name='sortBy'
+                defaultChecked={sorting === "asc"}
+                 />
+                 <label>Low to High</label>
+           </div>
+           <div>
+           <input onChange={handleSort}
+                type='radio'
+                value='desc'
+                name='sortBy'
+                defaultChecked={sorting === "desc"}
+                 />
+                 <label>High to Low</label>
+           </div>
+        </div>
+
+
+        <div className='category_p'>
+          <p>Sort By Rating</p>
+        </div>
+
+        <div className='product__checkbox'>
+           <div className='check__boxes'>
+                <input onChange={handleSort}
+                type='radio'
+                value='asc'
+                name='sortBy'
+                defaultChecked={sorting === "asc"}
+                 />
+                 <label>Low to High</label>
+           </div>
+           <div>
+           <input onChange={handleSort}
+                type='radio'
+                value='desc'
+                name='sortBy'
+                defaultChecked={sorting === "desc"}
+                 />
+                 <label>High to Low</label>
+           </div>
+        </div>
+      </div> 
     </div>
   )
 }

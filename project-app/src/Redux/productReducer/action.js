@@ -29,3 +29,7 @@ export const getData=(params={})=>(dispatch)=>{
         dispatch(getDataFailure())
     })
 }
+
+// http://localhost:8080/data
+
+//

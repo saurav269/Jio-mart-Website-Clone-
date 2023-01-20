@@ -44,6 +44,11 @@ body{
     /* border: 1px solid blue; */
     width: 78%;
 }
+.pic__div:hover{
+    display: block;
+   width: 82%;
+    cursor: pointer;
+}
 
 .product__all{
     border: 1px solid gray;
@@ -57,6 +62,10 @@ body{
 .product__name{
     /* border: 1px solid red; */
     line-height: 16px;
+}
+.product__name:hover{
+    cursor: pointer;
+    font-size: 18px;
 }
 .product__cate{
     /* border: 1px solid red; */
@@ -87,7 +96,7 @@ body{
     margin-left: 2px;
 }
 .filter__div{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 50%;
     height: 800px;
     margin-left: 15px;
@@ -97,12 +106,14 @@ body{
     top: 0px;
 }
 .mainn__filteer{
-    border: 1px solid red;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding-bottom: 5px;
 }
 .filter_p{
     /* border: 1px solid red; */
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     /* width: 98%; */
     margin: auto;
@@ -112,11 +123,11 @@ body{
 }
 .category_p{
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     /* width: 98%; */
-    margin: auto;
-    padding: 0.2rem 0.75rem;
+    margin-top: -5px;
+    padding: 0rem 0.75rem;
     border-bottom: 1px solid gray;
 }
 .product__checkbox{
@@ -129,6 +140,12 @@ body{
     border: 1px solid red;
 } */
 .check__boxes{
-    /* border: 1px solid red; */
+    /* border: 1px solid green; */
     padding-bottom: 3px;
+}
+.mainn__sort{
+    border: 1px solid gray;
+    border-radius: 1rem;
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
