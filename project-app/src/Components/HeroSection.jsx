@@ -5,6 +5,7 @@ import { Box, Image } from "@chakra-ui/react";
 import MenuBar from "./MenuBar";
 import Slider2 from "./Slider2/Slider2"
 import Footer from "./Footer";
+import Slider3 from "./Slider3/Slider3";
 
 const HeroSection = () => {
   return (
@@ -34,6 +35,7 @@ const HeroSection = () => {
           alt="hr"
         />
       <Slider2/>
+      <Slider3/>
       <Footer/>
     </Box>
   );
