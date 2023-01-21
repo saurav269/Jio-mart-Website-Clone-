@@ -3,10 +3,12 @@ import Slider from "./Slider/Slider";
 import React from "react";
 import { Box, Image } from "@chakra-ui/react";
 import MenuBar from "./MenuBar";
+import Slider2 from "./Slider2/Slider2"
+import Footer from "./Footer";
 
 const HeroSection = () => {
   return (
-    <Box  width={"98%"} margin={"auto"} mt={"80px"}>
+    <Box display={"block"}  width={"98%"} margin={"auto"} mt={"80px"}>
       <MenuBar/>
       <Slider />
 
@@ -31,7 +33,8 @@ const HeroSection = () => {
           src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1673547289_Aaj-ki-Deals_Web.jpg"
           alt="hr"
         />
-    
+      <Slider2/>
+      <Footer/>
     </Box>
   );
 };

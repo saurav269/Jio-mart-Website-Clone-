@@ -4,9 +4,9 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <Wrapper>
-      <Grid>
-        <Div>
+    <div className="Wrapper">
+      <div className="Grid">
+        <div className="Div">
           <h5>MOST POPULAR CATEGORIES</h5>
           <p>Staples</p>
           <p>Beverages</p>
@@ -16,8 +16,8 @@ const Footer = () => {
           <p> Baby Care</p>
           <p>Snacks & Branded Foods</p>
           <p>Dairy & Bakery</p>
-        </Div>
-        <Div>
+        </div>
+        <div className="Div">
           <h5>CUSTOMER SERVICES</h5>
           <p>About Us</p>
           <p>FAQ</p>
@@ -25,8 +25,8 @@ const Footer = () => {
           <p>Privacy policy</p>
           <p>E-waste Policy</p>
           <p>Cancellation and return policy</p>
-        </Div>
-        <Div >
+        </div>
+        <div className="Div" >
           <h5>CONTACT US</h5>
           <p>
             WhatsApp us :
@@ -64,46 +64,46 @@ const Footer = () => {
               alt=""
             />
           </div>
-        </Div>
-      </Grid>
+        </div>
+      </div>
       <hr style={{marginTop:"20px", color:"rgb(169, 172, 172)"}} />
       
       <div style={{display:"flex"}}>
         <p>Best viewed on Microsoft Edge 81+, Mozilla Firefox 75+, Safari 5.1.5+, Google Chrome 80+</p>
         <p>© 2022 All rights reserved. Reliance Retail Ltd.</p>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 
 export default Footer;
 
-const Wrapper = styled.div`
-  border: 0px solid black;
-  width: 100%;
-  // position: fixed;
-  // left: 0;
-  // bottom: 10px;
-  background-color: rgb(235, 233, 233);
-  padding:50px 0px 50px 0px;
-`;
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 80%;
-  margin: auto;
-  @media (max-width: 790px){
-    grid-template-columns: repeat(2, 1fr);
-    overflow: scroll;
-  }
-  @media (max-width: 350px){
-    grid-template-columns: repeat(1, 1fr);
-    overflow: scroll;
-  }
-`;
+// const Wrapper = styled.div`
+//   border: 0px solid black;
+//   width: 100%;
+//   // position: fixed;
+//   // left: 0;
+//   // bottom: 10px;
+//   background-color: rgb(235, 233, 233);
+//   padding:50px 0px 50px 0px;
+// `;
+// const Grid = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   width: 80%;
+//   margin: auto;
+//   @media (max-width: 790px){
+//     grid-template-columns: repeat(2, 1fr);
+//     overflow: scroll;
+//   }
+//   @media (max-width: 350px){
+//     grid-template-columns: repeat(1, 1fr);
+//     overflow: scroll;
+//   }
+// `;
 
-const Div = styled.div`
-  border: 0px solid red;
-  text-align: left;
-  line-height: 2;
-`;
+// const Div = styled.div`
+//   border: 0px solid red;
+//   text-align: left;
+//   line-height: 2;
+// `;
