@@ -1,9 +1,484 @@
 {
-  "posts": [
+  "data": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Fresho Onion, 1 kg",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003515/onion-1-kg-product-images-o590003515-p590003515-0-202203170724.jpg",
+      "rating": 4.5,
+      "price": 30
+    },
+    {
+      "id": 2,
+      "name": "Sweet Corn 1pc (Approx 250 g - 450 g)",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590001266/sweet-corn-1-pc-approx-250-g-450-g-product-images-o590001266-p590001266-0-202203170359.jpg",
+      "rating": 4.5,
+      "price":  12.00
+    },
+    {
+      "id": 3,
+      "name": "Coconut 1 pc (Approx 350 g - 600 g)",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590000086/coconut-1-pc-approx-350-g-600-g-product-images-o590000086-p590000086-0-202203170206.jpg",
+      "rating": 4,
+      "price": 24.00
+    },
+    {
+      "id": 4,
+      "name": "Potato per kg",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003516/potato-per-kg-product-images-o590003516-p590003516-0-202203170642.jpg",
+      "rating": 4.5,
+      "price": 25.00
+    },
+    {
+      "id": 5,
+      "name": "Bhendi (Okra) 250 g",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003550/bhendi-okra-500-g-product-images-o590003550-p590003550-0-202203170339.jpg",
+      "rating": 4,
+      "price": 20.00
+    },
+    {
+      "id": 6,
+      "name": "Pineapple Queen 1 pc (Approx 700 g - 1200 g)",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590000070/pineapple-queen-1-pc-approx-700-g-1200-g-product-images-o590000070-p590000070-0-202203170357.jpg",
+      "rating": 4.5,
+      "price": 49.00
+    },
+    {
+      "id": 7,
+      "name": "Papaya (Each) (Approx. 800 g - 1600 g)",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590001247/papaya-each-approx-800-g-1600-g-product-images-o590001247-p590001247-0-202203170247.jpg",
+      "rating": 4.3,
+      "price":  54.00
+    },
+    {
+      "id": 8,
+      "name": "Banana Robusta 6 pcs (Box) (Approx 800 g - 1100 g)",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590001285/banana-robusta-6-pcs-box-approx-800-g-1100-g-product-images-o590001285-p590001285-0-202203170808.jpg",
+      "rating": 4.5,
+      "price":  45.00
+    },
+    {
+      "id": 9,
+      "name": "Ginger Indian 200 g",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003531/ginger-indian-200-g-product-images-o590003531-p590003531-0-202203171030.jpg",
+      "rating": 4.5,
+      "price":  20.00
+    },
+    {
+      "id": 10,
+      "name": "Green Chilli 200 g",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003533/green-chilli-200-g-product-images-o590003533-p590003533-0-202203150435.jpg",
+      "rating": 4,
+      "price":  20.00
+    },
+    {
+      "id": 11,
+      "name": "Apple Indian 6 pcs (Pack) (Approx 750 g - 950 g)",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590004487/apple-indian-6-pcs-pack-approx-750-g-950-g-product-images-o590004487-p590004487-0-202203170227.jpg",
+      "rating": 4.5,
+      "price":  149.00
+    },
+    {
+      "id": 12,
+      "name": "Cucumber 500 g",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590003548/cucumber-500-g-product-images-o590003548-p590003548-0-202203152002.jpg",
+      "rating": 4.5,
+      "price": 23.00
+    },
+    {
+      "id": 13,
+      "name": "Amul Butter 100 g (Carton)",
+      "category": "Dairy",
+      "image": "https://www.jiomart.com/images/product/600x600/490001387/amul-butter-100-g-carton-product-images-o490001387-p490001387-0-202203170403.jpg",
+      "rating": 4,
+      "price": 50.00
+    },
+    {
+      "id": 14,
+      "name": "Amul Cheese Block 200 g (Carton)",
+      "category": "Dairy",
+      "image": "https://www.jiomart.com/images/product/600x600/490001401/amul-cheese-block-200-g-carton-product-images-o490001401-p490001401-0-202204261856.jpg",
+      "rating": 4.5,
+      "price": 112.00
+    },
+    {
+      "id": 15,
+      "name": "Fresho Onion, 1 kg",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003515/onion-1-kg-product-images-o590003515-p590003515-0-202203170724.jpg",
+      "rating": 4.5,
+      "price": 30.00
+    },
+    {
+      "id": 16,
+      "name": "Kissan Fresh Tomato Ketchup 1.2 kg",
+      "category": "Ketchup",
+      "image": "https://www.jiomart.com/images/product/600x600/492391349/kissan-fresh-tomato-ketchup-1-2-kg-product-images-o492391349-p590809928-0-202203150627.jpg",
+      "rating": 4.5,
+      "price": 109.00
+    },
+    {
+      "id": 17,
+      "name": "Parle-G Gold Biscuits 1 kg",
+      "category": "Biscuits",
+      "image": "https://www.jiomart.com/images/product/600x600/491335633/parle-g-gold-biscuits-1-kg-product-images-o491335633-p491335633-0-202203150704.jpg",
+      "rating": 4.5,
+      "price": 120.00
+    },
+    {
+      "id": 18,
+      "name": "Britannia Marie Gold Biscuits 250 g",
+      "category": "Biscuits",
+      "image": "https://www.jiomart.com/images/product/600x600/490353645/britannia-marie-gold-biscuits-250-g-product-images-o490353645-p490353645-0-202203170207.jpg",
+      "rating": 4,
+      "price": 35.00
+    },
+    {
+      "id": 19,
+      "name": "Dalda Refined Sunflower Oil 1 L",
+      "category": "Oil",
+      "image": "https://www.jiomart.com/images/product/600x600/490488116/dalda-refined-sunflower-oil-1-l-product-images-o490488116-p590312070-0-202203152126.jpg",
+      "rating": 4.5,
+      "price": 147.00
+    },
+    {
+      "id": 20,
+      "name": "Maggi Hot & Sweet Tomato Chilli Sauce 1 kg",
+      "category": "Ketchup",
+      "image": "https://www.jiomart.com/images/product/600x600/490000488/maggi-hot-sweet-tomato-chilli-sauce-1-kg-product-images-o490000488-p490000488-0-202204291242.jpg",
+      "rating": 4.4,
+      "price": 150.00
+    },
+    {
+      "id": 21,
+      "name": "Tur / Arhar Dal 2 kg",
+      "category": "Dal",
+      "image": "https://www.jiomart.com/images/product/600x600/491417390/tur-arhar-dal-2-kg-product-images-o491417390-p491417390-0-202203170610.jpg",
+      "rating": 4.2,
+      "price": 234.00
+    },
+    {
+      "id": 22,
+      "name": "Pears Pure & Gentle Soap with Natural Oils 125 g (Buy 4 Get 1 Free)",
+      "category": "Soap",
+      "image": "https://www.jiomart.com/images/product/600x600/491085658/pears-pure-gentle-soap-with-natural-oils-125-g-buy-4-get-1-free-product-images-o491085658-p491085658-0-202203170226.jpg",
+      "rating": 4.5,
+      "price": 267.00
+    },
+    {
+      "id": 23,
+      "name": "Tata Iodised Salt 1 kg",
+      "category": "Salt",
+      "image": "https://www.jiomart.com/images/product/600x600/490000073/tata-iodised-salt-1-kg-product-images-o490000073-p490000073-0-202206021938.jpg",
+      "rating": 4.5,
+      "price": 25.00
+    },
+    {
+      "id": 24,
+      "name": "Park Avenue Pure Luxury Shea Butter + Coconut Oil Premium Men's Soap 125 g",
+      "category": "Soap",
+      "image": "https://www.jiomart.com/images/product/600x600/490003512/park-avenue-pure-luxury-shea-butter-coconut-oil-premium-men-s-soap-125-g-product-images-o490003512-p590804637-0-202203170314.jpg",
+      "rating": 4.2,
+      "price":  65.00
+    },
+    {
+      "id": 25,
+      "name": "Mosambi 1 kg",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590000448/mosambi-1-kg-product-images-o590000448-p590000448-0-202203170909.jpg",
+      "rating": 4,
+      "price": 89.00
+    },
+    {
+      "id": 26,
+      "name": "Watermelon Kiran Big 1 pc (Approx. 2800 g - 4000 g)",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590001265/watermelon-kiran-1-pc-approx-2300-g-3000-g-product-images-o590001265-p590041413-0-202203142036.jpg",
+      "rating": 4.5,
+      "price": 54.00
+    },
+    {
+      "id": 27,
+      "name": "Tata Sampann Unpolished Tur / Arhar Dal 1 kg",
+      "category": "Dal",
+      "image": "https://www.jiomart.com/images/product/600x600/490830932/tata-sampann-unpolished-tur-arhar-dal-1-kg-product-images-o490830932-p490830932-0-202207201859.jpg",
+      "rating": 4.5,
+      "price": 154.00
+    },
+    {
+      "id": 28,
+      "name": "Lunn Pink Rock Salt 500 g",
+      "category": "Salt",
+      "image": "https://www.jiomart.com/images/product/600x600/491586715/lunn-pink-rock-salt-500-g-product-images-o491586715-p590103030-0-202207291825.jpg",
+      "rating": 4.3,
+      "price": 50.00
+    },
+    {
+      "id": 29,
+      "name": "Tender Coconut Cling Wrapped (1 pc) (Approx 900 g - 1300 g)",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590003564/tender-coconut-cling-wrapped-1-pc-approx-900-g-1300-g-product-images-o590003564-p590003564-0-202203151146.jpg",
+      "rating": 4.5,
+      "price": 42.00
+    },
+    {
+      "id": 30,
+      "name": "Carrot Orange 500 g",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003546/carrot-orange-500-g-product-images-o590003546-p590003546-0-202203151011.jpg",
+      "rating": 4.5,
+      "price": 29.00
+    },
+    {
+      "id": 31,
+      "name": "Beetroot 500 g",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003540/beetroot-500-g-product-images-o590003540-p590003540-0-202203141904.jpg",
+      "rating": 4,
+      "price": 20.00
+    },
+    {
+      "id": 32,
+      "name": "Good Life Unpolished Toor Dal 1 kg",
+      "category": "Dal",
+      "image": "https://www.jiomart.com/images/product/600x600/492851045/good-life-unpolished-toor-dal-1-kg-product-images-o492851045-p591219169-0-202204261917.jpg",
+      "rating": 4.5,
+      "price": 153.00
+    },
+    {
+      "id": 33,
+      "name": "Amul Fresh Paneer 200 g (Pack)",
+      "category": "Dairy",
+      "image": "https://www.jiomart.com/images/product/600x600/490174895/amul-fresh-paneer-200-g-pack-product-images-o490174895-p490174895-0-202203170432.jpg",
+      "rating": 4.4,
+      "price": 82.00
+    },
+    {
+      "id": 34,
+      "name": "Amul Masti Dahi 1 kg (Pouch)",
+      "category": "Dairy",
+      "image": "https://www.jiomart.com/images/product/600x600/490808047/amul-masti-dahi-1-kg-pouch-product-images-o490808047-p590032629-0-202203170902.jpg",
+      "rating": 4.2,
+      "price": 72.00
+    },
+    {
+      "id": 35,
+      "name": "Kundri (Coccinia) 250 g",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003556/kundri-coccinia-500-g-product-images-o590003556-p590003556-0-202203170921.jpg",
+      "rating": 4,
+      "price": 21.00
+    },
+    {
+      "id": 36,
+      "name": "Britannia 50-50 Maska Chaska Biscuits 300 g",
+      "category": "Biscuits",
+      "image": "https://www.jiomart.com/images/product/600x600/491587135/britannia-50-50-maska-chaska-biscuits-300-g-product-images-o491587135-p590033900-0-202209151506.jpg",
+      "rating": 4.3,
+      "price": 75.00
+    },
+    {
+      "id": 37,
+      "name": "Cauliflower 1 pc (Approx 600 g - 1000 g)",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003537/cauliflower-1-pc-approx-600-g-1000-g-product-images-o590003537-p590003537-0-202203170515.jpg",
+      "rating": 4.3,
+      "price": 32.00
+    },
+    {
+      "id": 38,
+      "name": "Brinjal Purple Striped 250 g",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590004102/brinjal-purple-striped-500-g-product-images-o590004102-p590004102-0-202203150748.jpg",
+      "rating": 4.2,
+      "price":  20
+    },
+    {
+      "id": 39,
+      "name": "Cabbage per Pc (Approx 600 g - 1000 g)",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003538/cabbage-per-pc-approx-600-g-1000-g-product-images-o590003538-p590003538-0-202203170436.jpg",
+      "rating": 4.4,
+      "price": 18.00
+    },
+    {
+      "id": 40,
+      "name": "Britannia Milk Bikis Biscuits 500 g",
+      "category": "Biscuits",
+      "image": "https://www.jiomart.com/images/product/600x600/491587134/britannia-milk-bikis-biscuits-500-g-product-images-o491587134-p491587134-0-202203170354.jpg",
+      "rating": 4.5,
+      "price": 80.00
+    },
+    {
+      "id": 41,
+      "name": "Parle Krack Jack Biscuits 400 g",
+      "category": "Biscuits",
+      "image": "https://www.jiomart.com/images/product/600x600/491439007/parle-krack-jack-biscuits-400-g-product-images-o491439007-p491439007-0-202203151355.jpg",
+      "rating": 4.4,
+      "price": 70.00
+    },
+    {
+      "id": 42,
+      "name": "Parle Happy Happy Choco-Chip Cookies 400 g",
+      "category": "Biscuits",
+      "image": "https://www.jiomart.com/images/product/600x600/491984416/parle-happy-happy-choco-chip-cookies-400-g-product-images-o491984416-p590309510-0-202203141950.jpg",
+      "rating": 4.5,
+      "price": 75.00
+    },
+    {
+      "id": 43,
+      "name": "Good Life Unpolished Masoor Dal 500 g",
+      "category": "Dal",
+      "image": "https://www.jiomart.com/images/product/600x600/492851041/good-life-unpolished-masoor-dal-500-g-product-images-o492851041-p591219165-0-202204261917.jpg",
+      "rating": 4.5,
+      "price": 70.00
+    },
+    {
+      "id": 44,
+      "name": "Gowardhan Soft & Nutritious Paneer Classic Block 200 g (Pouch)",
+      "category": "Dairy",
+      "image": "https://www.jiomart.com/images/product/600x600/490863551/gowardhan-soft-nutritious-paneer-classic-block-200-g-pouch-product-images-o490863551-p490863551-0-202210041751.jpg",
+      "rating": 4.5,
+      "price": 88.00
+    },
+    {
+      "id": 45,
+      "name": "Britannia Cheese Block 200 g (Carton)",
+      "category": "Dairy",
+      "image": "https://www.jiomart.com/images/product/600x600/490010168/britannia-cheese-block-200-g-carton-product-images-o490010168-p490010168-0-202203170747.jpg",
+      "rating": 4.4,
+      "price": 156
+    },
+    {
+      "id": 46,
+      "name": "Fortune Sunlite Refined Sunflower Oil 1 L",
+      "category": "Oil",
+      "image": "https://www.jiomart.com/images/product/600x600/490000052/fortune-sunlite-refined-sunflower-oil-1-l-product-images-o490000052-p490000052-0-202203150155.jpg",
+      "rating": 4,
+      "price": 160
+    },
+    {
+      "id": 47,
+      "name": "Medimix Glycerine & Lakshadi Oil Transparent Soap 125 g (Pack of 4)",
+      "category": "Soap",
+      "image": "https://www.jiomart.com/images/product/600x600/490935473/medimix-glycerine-lakshadi-oil-transparent-soap-125-g-pack-of-4-product-images-o490935473-p490935473-0-202203171131.jpg",
+      "rating": 4.5,
+      "price": 280.00
+    },
+    {
+      "id": 48,
+      "name": "India Gate Mogra Basmati Rice 10 kg",
+      "category": "Rice",
+      "image": "https://www.jiomart.com/images/product/600x600/490005504/india-gate-mogra-basmati-rice-10-kg-product-images-o490005504-p490005504-0-202203150320.jpg",
+      "rating": 4.5,
+      "price": 630.00
+    },
+    {
+      "id": 49,
+      "name": "Daawat Sehat Mini Mogra 60 Basmati Rice 10 kg",
+      "category": "Rice",
+      "image": "https://www.jiomart.com/images/product/600x600/491317316/daawat-sehat-mini-mogra-60-basmati-rice-10-kg-product-images-o491317316-p491317316-0-202203170743.jpg",
+      "rating": 4.4,
+      "price": 540.00
+    },
+    {
+      "id": 50,
+      "name": "Gemini Refined Sunflower Oil 1 L",
+      "category": "Oil",
+      "image": "https://www.jiomart.com/images/product/600x600/490012719/gemini-refined-sunflower-oil-1-l-product-images-o490012719-p490012719-0-202203151822.jpg",
+      "rating": 4.2,
+      "price": 158.00
+    },
+    {
+      "id": 51,
+      "name": "Ching's Secret Schezwan Chutney 600 g",
+      "category": "Ketchup",
+      "image": "https://www.jiomart.com/images/product/600x600/491390742/ching-s-secret-schezwan-chutney-600-g-product-images-o491390742-p491390742-0-202203150233.jpg",
+      "rating": 4.5,
+      "price": 130.00
+    },
+    {
+      "id": 52,
+      "name": "Funfoods Original Veg Mayonnaise 875 g",
+      "category": "Ketchup",
+      "image": "https://www.jiomart.com/images/product/600x600/491551838/funfoods-original-veg-mayonnaise-875-g-product-images-o491551838-p491551838-0-202206241908.jpg",
+      "rating": 4.5,
+      "price": 185.00
+    },
+    {
+      "id": 53,
+      "name": "Tomato 1 kg",
+      "category": "Vegetables",
+      "image": "https://www.jiomart.com/images/product/600x600/590003517/tomato-1-kg-product-images-o590003517-p590003517-0-202203170629.jpg",
+      "rating": 4.5,
+      "price":  26
+    },
+    {
+      "id": 54,
+      "name": "Cadbury Oreo Original Chocolatey Sandwich Biscuits Jumbo Pack 500 g",
+      "category": "Biscuits",
+      "image": "https://www.jiomart.com/images/product/600x600/491696496/cadbury-oreo-original-chocolatey-sandwich-biscuits-jumbo-pack-500-g-product-images-o491696496-p590110608-0-202203170406.jpg",
+      "rating": 4.5,
+      "price": 104.00
+    },
+    {
+      "id": 55,
+      "name": "Sunrich Refined Sunflower Oil 5 L",
+      "category": "Oil",
+      "image": "https://www.jiomart.com/images/product/600x600/490011082/sunrich-refined-sunflower-oil-5-l-product-images-o490011082-p490011082-0-202210031913.jpg",
+      "rating": 4.5,
+      "price":  800
+    },
+    {
+      "id": 56,
+      "name": "Lotte Choco Pie 28 g (12 pcs)",
+      "category": "Biscuits",
+      "image": "https://www.jiomart.com/images/product/600x600/490009614/lotte-creamfilled-choco-pie-28-g-pack-of-12-product-images-o490009614-p490009614-0-202203170648.jpg",
+      "rating": 4.3,
+      "price": 100
+    },
+    {
+      "id": 57,
+      "name": "India Gate Feast Rozzana Basmati Rice 1 kg",
+      "category": "Rice",
+      "image": "https://www.jiomart.com/images/product/600x600/490427668/india-gate-feast-rozzana-basmati-rice-1-kg-product-images-o490427668-p490427668-0-202204281542.jpg",
+      "rating": 4.5,
+      "price": 89.00
+    },
+    {
+      "id": 58,
+      "name": "Orange Imported 1 kg",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590000025/orange-imported-1-kg-product-images-o590000025-p590000025-0-202203171007.jpg",
+      "rating": 4.5,
+      "price": 115.00
+    },
+    {
+      "id": 59,
+      "name": "Strawberry (Pack) (Approx 170 g - 250 g)",
+      "category": "Fruits",
+      "image": "https://www.jiomart.com/images/product/600x600/590001814/strawberry-pack-approx-170-g-250-g-product-images-o590001814-p590116964-0-202203170741.jpg",
+      "rating": 4.5,
+      "price": 39
+    },
+    {
+      "id": 60,
+      "name": "Amul Taaza Homogenised Toned Milk 1 L (Tetra Pak)",
+      "category": "Dairy",
+      "image": "https://www.jiomart.com/images/product/600x600/490010311/amul-taaza-homogenised-toned-milk-1-l-tetra-pak-product-images-o490010311-p490010311-0-202203152257.jpg",
+      "rating": 4.5,
+      "price": 66.00
     }
   ]
 }

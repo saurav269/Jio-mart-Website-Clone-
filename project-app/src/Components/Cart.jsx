@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import { BsClipboardCheck } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 import { MdOutlinePayment } from "react-icons/md"
+import { useNavigate } from "react-router-dom";
 import "./Cart.css";
 import { CartItem } from "./CartItem";
+
 
 const Cart = () => {
   let cart = JSON.parse(localStorage.getItem("CartData")) || [];
@@ -20,17 +22,15 @@ const Cart = () => {
     return acc + (elem.qty * (elem.price1))
   }, 0)
 
-  
-
   console.log(cart);
 
   return (
 
     <Flex direction="column" >
-  
-      <Flex direction="column" padding="50px 200px" justifyContent="space-between">
+      {/* //parent */}
+      <Flex direction="row" padding="30px 50px" justifyContent="space-between">
 
-        <Box><h1>My Cart</h1></Box>
+        <Box><Heading fontSize="23px"  fontFamily="inherit">My Cart</Heading></Box>
         {cart.length > 0 && <Flex>
           <Box> <ul style={{ "display": "flex", "list-style-type": "none" }}>
             <li><HiShoppingCart size="22px" color="rgb(0,142,204)" /></li>
@@ -53,10 +53,8 @@ const Cart = () => {
 
         <Box width="55%" height="600px" overflow="scroll" >
           <Box backgroundColor="white" height="auto" >
-            <Heading fontSize="23px" padding="30px">Groceries Basket { } </Heading>
-
-            /* add to cart will show here */
-            
+            <Heading fontSize="23px" padding="30px">Basket { } </Heading>
+            {/* add to cart will show here */}
             {cart.length > 0 && cart.map((e) => {
               return <CartItem elem={e} cart={cart} onChange={forceUpdate}/>
             })}
@@ -93,18 +91,12 @@ const Cart = () => {
         </Box>
 
 
-
-
-
-
       </Flex> : <Flex display="column" justifyContent="center" margin="auto" >
         <Image boxSize='200px' src="https://www.jiomart.com/msassets/images/emptycart.svg" alt="empty cart" />
         <Flex><h3>Your Cart is empty!</h3></Flex>
-        <Flex><p>You have no items added in cart</p></Flex>
-        <a href="./">
-          <button className="primary">Add Products</button>
-        </a>      
-        </Flex>}        
+        <Flex><p fontSize="20px" textAlign="center">You have no items added in cart</p></Flex> 
+        <button className="primary">Add Products</button></Flex>}
+
     </Flex>
 
 
