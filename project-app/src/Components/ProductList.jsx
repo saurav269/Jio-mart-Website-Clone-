@@ -15,12 +15,13 @@ import './products.css'
     // console.log(location)
 
     useEffect(() =>{
-      let sortBy = searchParams.get("sorting");
+      let sortBy = searchParams.get("sort");
         let paramsData = {
             params : {
+              rating : searchParams.getAll("rating"),
               category : searchParams.getAll("category"),
-              _sort : sortBy && "price" && "rating",
-              _order : sortBy,
+              _sort : sortBy,
+              _order : searchParams.get("order"),
            }
         }
         dispatch(getData(paramsData))

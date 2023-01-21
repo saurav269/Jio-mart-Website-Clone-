@@ -11,7 +11,10 @@ import ProductList from '../Components/ProductList'
             <div className='filter__div'>
                 <FilterProduct />
             </div>
-            <div className='product__main'>
+            <div className='produ__main'>
+              <div>
+                <img className='pro__img' src='https://www.jiomart.com/images/category/2/groceries-20210201.jpeg' alt=''/>
+              </div>
                 <ProductList />
             </div>
         </div>

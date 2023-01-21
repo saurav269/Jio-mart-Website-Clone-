@@ -65,7 +65,7 @@ body{
 }
 .product__name:hover{
     cursor: pointer;
-    font-size: 18px;
+    font-size: 17px;
 }
 .product__cate{
     /* border: 1px solid red; */
@@ -102,8 +102,8 @@ body{
     margin-left: 15px;
     border-radius: 1rem;
     background-color: #fff;
-    position: sticky;
-    top: 0px;
+    /* position: sticky;
+    top: 0px; */
 }
 .mainn__filteer{
     border: 1px solid gray;
@@ -148,4 +148,50 @@ body{
     border-radius: 1rem;
     margin-top: 10px;
     padding-bottom: 10px;
+}
+.btn{
+    /* border: 1px solid red; */
+    border: none;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    background-color: #008ecc;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+.btn1{
+    /* margin-left: 38%; */
+    border-radius: 50%;
+    width: 25%;
+    /* height: 29px; */
+    border: none;
+    font-size: 23px;
+    background-color: #20a8e3;
+    color: #fff;
+}
+.pro__img{
+    /* border: 1px solid red; */
+    margin-right: 20px;
+    margin-bottom: 2%;
+}
+.change_quantity_container{
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    height: 35px;
+    width: 45%;
+    margin-left: 100px;
+    rotate:initial;
+    display: flex;
+    gap: 5px;
+    justify-content:flex-end;
+    margin-bottom: 15px;
+}
+.quantity{
+    font-size: 20px;
+    /* text-align: center; */
+    margin: auto;
 }

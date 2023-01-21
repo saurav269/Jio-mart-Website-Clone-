@@ -1,7 +1,11 @@
   import React from 'react'
   import{StarIcon} from '@chakra-ui/icons'
+import { useState } from 'react'
+import CartButton from './CartButton'
 
   const ProductCard = ({image,name,category,price,rating}) => {
+
+    const [count, setCount] = useState(0)
     return (
       <div className='product__all'>
         <div>
@@ -23,8 +27,10 @@
         <StarIcon className='star'/></span>
         </div> 
       </div>
-                <div>
-                  <button>Add Product</button>
+                <div >
+                {count=== 0  || count > 1 ? (<div data-cy="add_to_cart">
+            <button className="btn" onClick={() =>setCount(count+1)}>Add to Cart +</button>
+            </div>) : (<CartButton />)}
                  </div>
       </div>
     )

@@ -10,9 +10,15 @@ const FilterProduct = () => {
 
   const initialCategory = searchParams.getAll("category");
   const initialSort = searchParams.getAll("sorting")
+  const initialRating = searchParams.getAll("rating")
+  const initialOrder = searchParams.getAll("order");
 
   const [category, setCategory] = useState(initialCategory || []);
-  const [sorting, setSorting] = useState(initialSort[0] || "");
+  const [sort, setSort] = useState(initialSort || []);
+  const [rating, setRating] = useState(initialRating || [])
+  const[order, setOrder] = useState(initialOrder || [])
+  
+  // console.log(sorting)
 
 
   const handleFilter=(e)=>{
@@ -27,19 +33,69 @@ const FilterProduct = () => {
      setCategory(newCategory)
   }
   // console.log(category)
+  // const handleSort=(e)=>{
+  //      setSorting(e.target.value)
+  // }
+  // console.log(sorting)
 
-  useEffect(() =>{
-    const params = {}
-    params.category = category
-    params.sorting = sorting
-    setSearchParams(params)
-  },[category, setSearchParams,sorting]);
+    const handleSortAsc=(e)=>{
+      // console.log(e.target.value)
+       let targetSort = e.target.value.split(" ")[0];
+       let targetOrder = e.target.value.split(" ")[1];
+
+       let newSort = [...sort];
+       let newOrder = [...order];
+
+       if(newOrder.includes(targetOrder)){
+        newOrder.splice(newOrder.indexOf(targetOrder), 1)
+       }else{
+        newOrder.push(targetOrder)
+       }
+        
+       if(newSort.includes(targetSort)){
+        newSort.splice(newSort.indexOf(targetSort), 1)
+       }else{
+        newSort.push(targetSort)
+       }
+       setSort(newSort)
+       setOrder(newOrder)
+    };
 
 
-  const handleSort=(e)=>{
-       setSorting(e.target.value)
-  }
-  console.log(sorting)
+    const handleSortDesc=(e)=>{
+      // console.log(e.target.value)
+       let targetSort = e.target.value.split(" ")[0];
+       let targetOrder = e.target.value.split(" ")[1];
+
+       let newSort = [...sort];
+       let newOrder = [...order];
+
+       if(newOrder.includes(targetOrder)){
+        newOrder.splice(newOrder.indexOf(targetOrder), 1)
+       }else{
+        newOrder.push(targetOrder)
+       }
+        
+       if(newSort.includes(targetSort)){
+        newSort.splice(newSort.indexOf(targetSort), 1)
+       }else{
+        newSort.push(targetSort)
+       }
+       setSort(newSort)
+       setOrder(newOrder)
+    };
+
+
+    useEffect(() =>{
+      const params = {}
+      params.rating = rating
+      params.sort = sort
+      params.order = order
+      params.category = category
+     
+      setSearchParams(params)
+    },[category, setSearchParams,sort,rating,order]);
+
 
   return (
     <div>
@@ -155,20 +211,20 @@ const FilterProduct = () => {
 
         <div className='product__checkbox'>
            <div className='check__boxes'>
-                <input onChange={handleSort}
-                type='radio'
-                value='asc'
-                name='sortBy'
-                defaultChecked={sorting === "asc"}
+                <input onChange={handleSortAsc}
+                type='checkbox'
+                value='price asc'
+                // name='sortBy'
+                checked={sort.includes("price") && order.includes("asc")}
                  />
                  <label>Low to High</label>
            </div>
            <div>
-           <input onChange={handleSort}
-                type='radio'
-                value='desc'
-                name='sortBy'
-                defaultChecked={sorting === "desc"}
+           <input onChange={handleSortDesc}
+                type='checkbox'
+                value='price desc'
+                // name='sortBy'
+                checked={sort.includes("price") && order.includes("desc")}
                  />
                  <label>High to Low</label>
            </div>
@@ -181,20 +237,20 @@ const FilterProduct = () => {
 
         <div className='product__checkbox'>
            <div className='check__boxes'>
-                <input onChange={handleSort}
-                type='radio'
-                value='asc'
-                name='sortBy'
-                defaultChecked={sorting === "asc"}
+                <input onChange={handleSortAsc}
+                type='checkbox'
+                value='rating asc'
+                // name='sortBy'
+                checked={sort.includes("rating") && order.includes("asc")}
                  />
                  <label>Low to High</label>
            </div>
            <div>
-           <input onChange={handleSort}
-                type='radio'
-                value='desc'
-                name='sortBy'
-                defaultChecked={sorting === "desc"}
+           <input onChange={handleSortDesc}
+                type='checkbox'
+                value='rating desc'
+                // name='sortBy'
+                checked={sort.includes("rating") && order.includes("desc")}
                  />
                  <label>High to Low</label>
            </div>
