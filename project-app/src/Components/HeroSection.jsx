@@ -9,8 +9,10 @@ import Slider3 from "./Slider3/Slider3";
 
 const HeroSection = () => {
   return (
-    <Box display={"block"}  width={"98%"} margin={"auto"} mt={"80px"}>
-      <MenuBar/>
+    <>
+    <MenuBar/>
+    <Box display={"block"}  width={"98%"} margin={"auto"} mt={"132px"}>
+      
       <Slider />
 
       <Image
@@ -38,6 +40,7 @@ const HeroSection = () => {
       <Slider3/>
       <Footer/>
     </Box>
+    </>
   );
 };
 
