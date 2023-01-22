@@ -1,5 +1,5 @@
 import './App.css';
-// import Payment from './Components/Payment';
+ import Payment from './Components/Payment';
 import Cart from './Components/Cart';
 
 import { Products } from "./Components/Products"
@@ -10,8 +10,7 @@ function App() {
     <div className="App">
       {/* <Cart/>  */}
       {/* <CartItem/> */}
-      <Products />
-      {/* <Payment/> */}
+      <Payment/>
 
     </div>
   );

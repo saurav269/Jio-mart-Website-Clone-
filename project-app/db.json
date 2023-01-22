@@ -1,11 +1,11 @@
 {
   "data": [
     {
-      "id": 1,
+      "idti": 1,
       "name": "Fresho Onion, 1 kg",
       "category": "Vegetables",
       "image": "https://www.jiomart.com/images/product/600x600/590003515/onion-1-kg-product-images-o590003515-p590003515-0-202203170724.jpg",
-      "rating": 4.5,
+      "rang": 4.5,
       "price": 30
     },
     {

@@ -9,15 +9,15 @@ const Products = () => {
         let data = await res.json()
         // console.log(data)
         setData(data)
-        localStorage.setItem("products", JSON.stringify(data))
+        // localStorage.setItem("products", JSON.stringify(data))
     }
 
 
     const handleClick = (produc) => {
-        let prod = JSON.parse(localStorage.getItem("products")) || []
+        let prod = JSON.parse(localStorage.getItem("CartData")) || []
         prod.push(produc)
-        localStorage.setItem("products", JSON.stringify(prod))
-        console.log(prod)
+        localStorage.setItem("CartData", JSON.stringify(prod))
+        // console.log(prod)
     }
     useEffect(() => {
         getData()
