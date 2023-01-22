@@ -16,7 +16,9 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import React from "react";
+
 import { RxHamburgerMenu } from "react-icons/rx";
+
 import { FaRegUserCircle } from "react-icons/fa";
 
 function DrawerExample() {
