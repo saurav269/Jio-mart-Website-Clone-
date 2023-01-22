@@ -49,7 +49,7 @@ const postUserLoginDataFailure = () => {
 export const getUserLoginDetails = (mobile) => (dispatch) => {
       dispatch(getUserLoginDataRequest());
 
-      return axios.get(`http://localhost:8080/userDetails?q=${mobile}`).then((res) => { console.log(res.data[0],"from get request in action"); dispatch(getUserLoginDataSuccess(res.data))} ).catch(
+      return axios.get(`https://joi-mart-login-api.onrender.com/userDetails?q=${mobile}`).then((res) => { console.log(res.data[0],"from get request in action"); dispatch(getUserLoginDataSuccess(res.data))} ).catch(
         err => dispatch(getUserLoginDataFailure())
       )
 }
@@ -57,10 +57,10 @@ export const getUserLoginDetails = (mobile) => (dispatch) => {
 export const postNewUserLoginDetails = (data) => (dispatch) => {
       dispatch(postUserLoginDataRequest());
 
-      axios.post(`http://localhost:8080/userDetails`,data).then((res) => 
+      return axios.post(`https://joi-mart-login-api.onrender.com/userDetails`,data).then((res) => 
       {dispatch(postUserLoginDataSuccess(res.data)); console.log(res.data,"from action.jsx");}).catch(err => dispatch(postUserLoginDataFailure()) )
 }
 
 export const updateUserAuthStatus = (id,isAuth) => {
-      axios.patch(`http://localhost:8080/userDetails/${id}`,isAuth)
+      axios.patch(`https://joi-mart-login-api.onrender.com/userDetails/${id}`,isAuth)
 }

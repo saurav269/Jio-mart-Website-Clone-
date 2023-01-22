@@ -15,6 +15,7 @@ import {
   updateUserAuthStatus,
 } from '../Redux/authentication/action'
 // import { userExist } from '../Redux/authentication/reducer'
+// import styles from "../styles/Login.module.css";
 
 export const initialState = {
   firstName: '',
@@ -42,8 +43,11 @@ export function LoginSignup() {
   const [color, setColor] = useState('red')
   const [otp] = useState('1234')
   const [visible, setVisible] = useState(false)
-  const btnRef = useRef()
+  const btnRef = useRef();
+  const otpRef = useRef();
   const navigate = useNavigate()
+  const [showMatchStatus,setShowMatchStatus] = useState(false);
+  const [matchStatus,setMatchStatus] = useState("passwords dont match");
   // const location = useLocation();
 
   // console.log(location)
@@ -69,7 +73,21 @@ export function LoginSignup() {
       if (e.target.name === 'mobile') {
         btnRef.current.disabled = false
       }
+      if(e.target.name === "confirmPassword"){
+        setShowMatchStatus(true);
+        if(e.target.value === userData.password){
+           otpRef.current.disabled = false;
+           setMatchStatus("passwords match");
+           setColor("green")
+        }else{
+          otpRef.current.disabled = true;
+          setMatchStatus("passwords dont match");
+          setColor("red")
+        }
+        // console.log(userData,"outside")
+      }
       if (e.target.name === 'otp') {
+        setShowMatchStatus(false);
         setVisible(true)
         if (e.target.value === otp) {
           setCheckMsg('OTP Matched')
@@ -78,8 +96,7 @@ export function LoginSignup() {
         } else {
           setCheckMsg('Incorrect OTP')
           setColor('red')
-        }
-  
+        }  
         if (e.target.value.length === 0) {
           // console.log("len is 0", e.target.value)
           setVisible(false)
@@ -135,12 +152,13 @@ export function LoginSignup() {
   }
   // console.log(showForm3)
   const addUser = async () => {
-     await dispatch(postNewUserLoginDetails(userData))
+    console.log(userData,"from addUser function in login signup")
+     let res = await dispatch(postNewUserLoginDetails(userData))
      // login();
      // currentUser = JSON.parse(localStorage.getItem("currentUser"))
-     let res = await dispatch(getUserLoginDetails(userData.mobile));
+    //  let res = await dispatch(getUserLoginDetails(userData.mobile));
     //  localStorage.setItem('currentUser', JSON.stringify(res.))
-    console.log(res)
+    console.log(res,"response from login signup")
 
     
     navigate('/')
@@ -153,44 +171,49 @@ export function LoginSignup() {
         navigate("/")
       }else{
 
-        console.log("in check credentioals")
+        alert("email or password is wrong")
       }
   }
   //------------------------------------RETURN---------------------------------------------------------
   return (
     <Box
+      id={styles.mainContainer}
       display="flex"
       borderRadius="10px"
       boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;"
-      width="70%"
+      width="80%"
+      height="auto"
       margin="auto"
       marginTop="70px"
       //   bg="pink.100"
     >
-      <Box>
+      <Box w="40%" id={ styles.subContainer}  >
         <Image
+          w="100%"
+          id={styles.img}
           src="https://www.jiomart.com/msassets/images/login-banner.jpg"
           alt="loginImage"
           borderRadius="10px 0px 0px 10px"
         />
       </Box>
 
-      <Box w="55%">
+      <Box id={styles.subContainer2} w="60%"  >
         {/* ---------------------------------------------1st form conditional rendering-------------------------------------------------------------- */}
         {showForm1 && (
           <>
             <Box
+              
               align="left"
-              //   border="1px solid blue"
+                // border="1px solid blue"
               margin="auto"
               w="50%"
               mt="20px"
             >
-              <Heading>Sign In</Heading>
-              <Text>Sign in to access your Orders, Offers and Wishlist.</Text>
+              <Heading id={styles.heading} >Sign In</Heading>
+              <Text id={styles.subHeading} >Sign in to access your Orders, Offers and Wishlist.</Text>
             </Box>
-            <FormControl width="50%" margin="auto" mt="100px">
-              <FormLabel>Mobile Number</FormLabel>
+            <FormControl  width="50%" margin="auto" >
+              <FormLabel id={styles.form1} mt="100px" >Mobile Number</FormLabel>
               <Input
                 border="2px solid gray"
                 type="number"
@@ -215,10 +238,12 @@ export function LoginSignup() {
         {showForm2 && (
           <>
             <Heading>Sign Up</Heading>
-            <FormControl width="50%" margin="auto" mt="50px">
+            <FormControl id={styles.form2Input}  width="50%" margin="auto" mt="30px">
               <FormLabel>Start by entering your First Name</FormLabel>
               <Input
-                id="firstName"
+                // w="200px"
+                // className={styles.form2Input}
+                // id="firstName"
                 name="firstName"
                 placeholder="First Name"
                 border="2px solid gray"
@@ -227,7 +252,9 @@ export function LoginSignup() {
                 onChange={getInput}
               />
               <Input
-                id="lastName"
+                // w="200px"
+                // className={styles.form2Input}
+                // id="lastName"
                 name="lastName"
                 placeholder="Last Name"
                 border="2px solid gray"
@@ -238,7 +265,9 @@ export function LoginSignup() {
                 isDisabled={userData.firstName.length === 0}
               />
               <Input
-                id="email"
+                // w="200px"
+                // className={styles.form2Input}
+                // id="email"
                 name="email"
                 placeholder="Enter Email"
                 border="2px solid gray"
@@ -249,6 +278,8 @@ export function LoginSignup() {
                 isDisabled={userData.lastName.length === 0}
               />
               <Input
+                // w="200px"
+                // className={styles.form2Input}
                 name="password"
                 placeholder="Password"
                 border="2px solid gray"
@@ -259,32 +290,38 @@ export function LoginSignup() {
                 isDisabled={userData.email.length === 0}
               />
               <Input
-                id="confirmPassword"
+                // w="200px"
+                // className={styles.form2Input}
+                // id="confirmPassword"
                 name="confirmPassword"
                 placeholder="Confirm Password"
                 border="2px solid gray"
                 type="password"
                 value={userData.confirmPassword}
                 onChange={getInput}
-                //   ref={confirmPasswordRef}
+                  // ref={confirmPasswordRef}
                 isDisabled={userData.password.length === 0}
               />
-              <FormLabel>
-                we have sent you an OTP on you mobile number +91{' '}
+              {showMatchStatus && <Text align="left" fontSize="15px" color={color} >{matchStatus}</Text>}
+              <FormLabel fontWeight="bold" mt="30px" >
+                Provide OTP sent on your mobile number +91{' '}
                 {userData.mobile}
               </FormLabel>
               <Input
+                // w="200px"
+                // className={styles.form2Input}
                 name="otp"
                 placeholder="Enter OTP"
                 border="2px solid gray"
                 type="password"
                 value={userData.otp}
                 onChange={getInput}
-                //   ref={otpRef}
-                isDisabled={userData.confirmPassword.length === 0}
+                  ref={otpRef}
+                isDisabled
+                // ={userData.confirmPassword.length === 0}
               />
               {visible && (
-                <Text color={color} align="left">
+                <Text fontSize="15px" color={color} align="left">
                   {checkMsg}
                 </Text>
               )}
@@ -304,9 +341,10 @@ export function LoginSignup() {
         )}
         {/* ---------------------------------------3rd form---------------------------------------------------------------------------- */}
         {showForm3 && (
-          <FormControl width="50%" margin="auto" mt="100px">
-            <FormLabel>Enter your Details to login</FormLabel>
+          <FormControl width="50%" margin="auto" >
+            <FormLabel id={styles.form3} mt="100px" >Enter your Details to login</FormLabel>
             <Input
+              mt="30px"
               border="2px solid gray"
               type="email"
               placeholder='Enter Email'
@@ -316,6 +354,7 @@ export function LoginSignup() {
             />
 
             <Input
+              mt="30px"
               border="2px solid gray"
               type="password"
               placeholder='Enter Password'
@@ -325,7 +364,7 @@ export function LoginSignup() {
             />
 
             <Button
-              mt="20px"
+              mt="30px"
               // isDisabled={userData.mobile.length === 0}
               // ref={btnRef}
               onClick={checkCredentials}
