@@ -6,7 +6,7 @@ const HeaderP3 = () => {
     <div className="header_3Con">
       <ul className="list">
       <li>
-          <Link className="link" to={"#"}>
+          <Link className="link" to={"/products"}>
            Groceries
           </Link>
           <span>

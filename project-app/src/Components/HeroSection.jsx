@@ -38,7 +38,7 @@ const HeroSection = () => {
         />
       <Slider2/>
       <Slider3/>
-      <Footer/>
+      {/* <Footer/> */}
     </Box>
     </>
   );
