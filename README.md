@@ -38,26 +38,26 @@ https://wonderful-choux-93af66.netlify.app/
 
 ---
 
-<h3>Some Glimps of Project :</h3>
+<!-- <h3>Some Glimps of Project :</h3>
 <h5>✨Home Page with Navbar and Footer</h5>
 ![Screenshot (187)](https://user-images.githubusercontent.com/107553043/213978937-9e0bc306-a293-450c-8fdf-cc585efb4df9.png)
 ![Screenshot (188)](https://user-images.githubusercontent.com/107553043/213978944-0b094a98-9a3f-4257-945a-a0ee148f0dba.png)
 ![Screenshot (184)](https://user-images.githubusercontent.com/107553043/213978948-a69712e9-1585-4dbd-ac7f-e2259222e40f.png)
 ![Screenshot (185)](https://user-images.githubusercontent.com/107553043/213978950-75a42da5-f30b-4b8d-ad9a-b8ff9ef78dc0.png)
-![Screenshot (186)](https://user-images.githubusercontent.com/107553043/213978951-792b7725-5a3b-466a-a74e-065e4c907040.png)
+![Screenshot (186)](https://user-images.githubusercontent.com/107553043/213978951-792b7725-5a3b-466a-a74e-065e4c907040.png) -->
 
 
 <h5>✨Login Page</h5>
 <img src="https://user-images.githubusercontent.com/107553043/213978937-9e0bc306-a293-450c-8fdf-cc585efb4df9.png"/>
 
 <h5>✨Products Page</h5>
-<img src="https://github.com/Nikhil-81/sleek-chance-4491/blob/main/bigbasket/Product%20Page.PNG"/>
+<img src="https://user-images.githubusercontent.com/107553043/213978944-0b094a98-9a3f-4257-945a-a0ee148f0dba.png"/>
 
 <h5>✨Single Product</h5>
-<img src="https://github.com/Nikhil-81/sleek-chance-4491/blob/main/bigbasket/Single%20Product%20Page.PNG"/>
+<img src="https://user-images.githubusercontent.com/107553043/213978948-a69712e9-1585-4dbd-ac7f-e2259222e40f.png"/>
 
 <h5>✨Cart page</h5>
-<img src="https://github.com/Nikhil-81/sleek-chance-4491/blob/main/bigbasket/Cart%20Page.PNG"/>
+<img src="https://user-images.githubusercontent.com/107553043/213978950-75a42da5-f30b-4b8d-ad9a-b8ff9ef78dc0.png"/>
 
 <h5>✨Checkout/Delivery/Address/Payment Page </h5>
-<img src="https://github.com/Nikhil-81/sleek-chance-4491/blob/main/bigbasket/Checkout%20Page.PNG"/>
+<img src="https://user-images.githubusercontent.com/107553043/213978951-792b7725-5a3b-466a-a74e-065e4c907040.png"/>
