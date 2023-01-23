@@ -57,7 +57,7 @@ https://wonderful-choux-93af66.netlify.app/
 <img src="https://user-images.githubusercontent.com/107553043/213978948-a69712e9-1585-4dbd-ac7f-e2259222e40f.png"/>
 
 <h5>✨Cart page</h5>
-<img src="https://user-images.githubusercontent.com/107553043/213978950-75a42da5-f30b-4b8d-ad9a-b8ff9ef78dc0.png"/>
+<img src="https://user-images.githubusercontent.com/107553043/213978950-75a42da5-f30b-4b8d-ad9a-b8ff9ef78dc0.png" alt="log"/>
 
 <h5>✨Checkout/Delivery/Address/Payment Page </h5>
 <img src="https://user-images.githubusercontent.com/107553043/213978951-792b7725-5a3b-466a-a74e-065e4c907040.png"/>
