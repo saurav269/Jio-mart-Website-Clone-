@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ProductCard from './ProductCard';
 //  import'./SingleCart.css';
 
@@ -14,7 +14,7 @@ import ProductCard from './ProductCard';
 
 const SingleCart = () => {
   let cart = JSON.parse(localStorage.getItem("CartData")) || []
-//   console.log(cart)
+  //console.log(cart)
 
   let {id} = useParams()
   const datas = useSelector((store) => store.ProductReducer.data)
@@ -22,13 +22,15 @@ const SingleCart = () => {
 
   useEffect(() =>{
     let productData = datas.find((ele) => ele.id === +id)
-    productData && setPro(productData)
+    productData && setPro(pro)
   },[])
 
   const addToCart = () => {
-    cart.push("");
+    cart.push(datas);
     localStorage.setItem('CartData', JSON.stringify(cart));
     // cart.find((el) => el.id === data.id && setQuantity(el.qty))
+    // window.location.href()
+   // console.log(cart)
 }
 
   
@@ -47,8 +49,8 @@ const SingleCart = () => {
             <ProductCard 
              pro={pro} />
           </div>
-          <button onClick={addToCart}>.....</button>
           
+          <button onClick={addToCart}>.....</button>
           {/* <button >Buy Now</button> */}
           </div>
       </div>

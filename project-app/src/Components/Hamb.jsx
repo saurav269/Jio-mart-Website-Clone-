@@ -15,13 +15,62 @@ import {
   Box,
   Heading,
 } from "@chakra-ui/react";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from '@chakra-ui/react'
 import React from "react";
+import { useState } from "react";
+import { updateUserAuthStatus } from "../Redux/AuthReducer/action";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaRegUserCircle } from "react-icons/fa";
+import {ChevronDownIcon} from "@chakra-ui/icons";
+import { useLocation } from "react-router-dom";
 
 function DrawerExample() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const [showLogin, setShowLogin] = useState(true);
+  const [showMenu,setShowMenu] = useState(false);
+
+  let currentUser = JSON.parse(localStorage.getItem("currentUser"))
+  // getLogin();
+
+
+  console.log(currentUser,"current user")
+  const location = useLocation();
+
+  // console.log(location,"from navbar")
+  // console.log(currentUser,"from navbar")
+  //-------------------------if statements------------------------------------------------------------------
+  if(currentUser && currentUser.isAuth === true){
+     if(showLogin===true){
+      setShowLogin(false)
+     }
+     if(showMenu===false){
+        setShowMenu(true);
+     }
+  }
+  //------------------------------FUNCTIONS---------------------------------------------------
+  const logout=()=>{
+    console.log(currentUser.id,"currentUser.id")
+    updateUserAuthStatus(currentUser.id,{isAuth:false})
+    currentUser.isAuth = false;
+    localStorage.setItem("currentUser",JSON.stringify(currentUser))
+    if(showLogin===false){
+      setShowLogin(true)
+     }
+     if(showMenu===true){
+        setShowMenu(false);
+     }
+    //  localStorage
+  }
 
   return (
     <>
@@ -38,10 +87,23 @@ function DrawerExample() {
         <DrawerContent>
           <DrawerCloseButton color={"white"} />
           <DrawerHeader bg={"#008ECC"} color={"white"}>
-            <Flex align={"center"} justify={"space-between"} w={"55%"}>
+            {showLogin && <Flex align={"center"} justify={"space-between"} w={"55%"}>
               <FaRegUserCircle />
               Hello, Sign in
-            </Flex>
+            </Flex>}
+            {showMenu && <>
+            <Menu  >
+              <MenuButton bg="#008ECC" as={Button} rightIcon={<ChevronDownIcon />}>
+                Hi, {currentUser.firstName}
+              </MenuButton>
+              <MenuList zIndex="10">
+                <MenuItem color="black">My Orders</MenuItem>
+                <MenuItem color="black">My Profile</MenuItem>
+                <MenuItem color="black">Track Orders</MenuItem>
+                <MenuItem color="black">My Cart</MenuItem>
+                <MenuItem color="black" onClick={logout} >Logout</MenuItem>
+              </MenuList>
+            </Menu>
             <Button
               bg={"#008ECC"}
               color={"white"}
@@ -51,6 +113,8 @@ function DrawerExample() {
             >
               Account
             </Button>
+            </>
+          }
             <Button
               bg={"#008ECC"}
               color={"white"}
