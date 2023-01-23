@@ -8,11 +8,11 @@ It is a Grocery website where you can buy day to day grocery for your Household.
 https://wonderful-choux-93af66.netlify.app/
 
 <h2>Team Members</h2>
-1.Saurav <br>
-2.Rajesh <br>
-3.Prateek <br>
-4.Avinash <br>
-5.Saurabh <br>
+1.Saurav Mallik(Leader) <br>
+2.Rajesh Ranjan <br>
+3.Prateek BhattaCharya <br>
+4.Avinash Kalmegh <br>
+5.Saurabh Pawar <br>
  
  ---
 
